@@ -7,12 +7,23 @@ on:
 permissions:
   contents: read
   pages: write
+  actions: write
 jobs:
-  cancel_stuck_pages_deployment:
+  clear_stale_run:
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel stale Pages deployment from first failed publication
+      - name: Force-cancel queued legacy workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/${{ github.repository }}/actions/runs/41907358689/force-cancel" || true
+      - name: Cancel abandoned GitHub Pages deployment
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh api --method POST "repos/${{ github.repository }}/pages/deployments/9800d3d2a0173511f4689fa49bc9558a2389f698/cancel"
+      - name: Check deployment status after cancel
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/pages" --jq '{status: .status, html_url: .html_url, source: .source}' || true
