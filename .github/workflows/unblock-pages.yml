@@ -1,0 +1,18 @@
+name: Unblock stuck GitHub Pages deployment
+on:
+  push:
+    paths:
+      - .github/workflows/unblock-pages.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+jobs:
+  cancel_stuck_pages_deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel stale Pages deployment from first failed publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/${{ github.repository }}/pages/deployments/9800d3d2a0173511f4689fa49bc9558a2389f698/cancel"
