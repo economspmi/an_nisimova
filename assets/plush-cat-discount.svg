@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 390" role="img" aria-labelledby="cat-title cat-desc">
+<title id="cat-title">Плюшевый котик со скидкой</title><desc id="cat-desc">Улыбающийся кремовый плюшевый котик в бордовом шарфике обнимает сердечко со скидкой 10 процентов.</desc>
+<defs>
+  <radialGradient id="fur" cx="44%" cy="30%" r="75%"><stop offset="0" stop-color="#fff9ef"/><stop offset=".68" stop-color="#efe3d4"/><stop offset="1" stop-color="#d7c5b4"/></radialGradient>
+  <linearGradient id="heart" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9c4b58"/><stop offset=".55" stop-color="#773441"/><stop offset="1" stop-color="#612631"/></linearGradient>
+  <linearGradient id="scarf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a85461"/><stop offset="1" stop-color="#642936"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="11"/></filter>
+  <filter id="felt" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".21" numOctaves="2" seed="7" result="noise"/><feComposite in="noise" in2="SourceGraphic" operator="in"/><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+</defs>
+<ellipse cx="261" cy="357" rx="178" ry="19" fill="#a9756a" opacity=".16" filter="url(#shadow)"/>
+<g stroke="#c9b7a7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <ellipse cx="253" cy="286" rx="142" ry="94" fill="url(#fur)"/>
+  <path d="M132 133Q108 73 132 44Q164 38 196 101Z" fill="url(#fur)"/>
+  <path d="M331 101Q367 38 402 45Q415 83 390 136Z" fill="url(#fur)"/>
+  <path d="M143 91Q139 70 146 62Q168 68 179 99Z" fill="#e9b8b1" stroke="none"/>
+  <path d="M351 99Q376 66 390 62Q398 83 385 107Z" fill="#e9b8b1" stroke="none"/>
+  <ellipse cx="262" cy="167" rx="147" ry="116" fill="url(#fur)"/>
+  <path d="M171 186q26-33 55 1M293 188q30-32 57 0" fill="none" stroke="#5b3e39" stroke-width="8"/>
+  <ellipse cx="211" cy="218" rx="21" ry="12" fill="#e7a99f" stroke="none" opacity=".65"/>
+  <ellipse cx="323" cy="218" rx="21" ry="12" fill="#e7a99f" stroke="none" opacity=".65"/>
+  <ellipse cx="262" cy="209" rx="15" ry="11" fill="#d58e87" stroke="none"/>
+  <path d="M262 220v8q-12 15-27 0M262 228q15 15 29 0" fill="none" stroke="#70504b" stroke-width="4"/>
+  <path d="M175 216l-55-11M177 232l-54 8M352 216l55-11M350 232l54 8" fill="none" stroke="#987d70" stroke-width="3" opacity=".75"/>
+</g>
+<path d="M134 262Q250 295 378 260L371 291Q255 324 145 289Z" fill="url(#scarf)"/>
+<path d="M187 288Q169 331 153 370Q176 381 202 371L231 306Z" fill="url(#scarf)"/>
+<path d="M168 369v11m12-8v11m14-12v11" stroke="#6b303b" stroke-width="6" stroke-linecap="round"/>
+<path d="M257 343C194 298 183 261 208 242C235 220 258 236 270 251C291 228 321 222 341 243C374 276 335 323 270 359Z" fill="url(#heart)" stroke="#5b2630" stroke-width="4"/>
+<path d="M257 343C194 298 183 261 208 242C235 220 258 236 270 251C291 228 321 222 341 243C374 276 335 323 270 359Z" fill="none" stroke="#e9b4b5" stroke-width="3" stroke-dasharray="5 9" opacity=".8" transform="translate(0,-4) scale(.99)"/>
+<g fill="url(#fur)" stroke="#c9b7a7" stroke-width="3">
+  <ellipse cx="196" cy="311" rx="33" ry="25" transform="rotate(-30 196 311)"/>
+  <ellipse cx="353" cy="310" rx="32" ry="25" transform="rotate(29 353 310)"/>
+</g>
+<g fill="#fff9f1" text-anchor="middle"><text x="271" y="307" font-family="Arial,Helvetica,sans-serif" font-size="45" font-weight="800" transform="rotate(-7 271 307)">−10%</text></g>
+<g fill="none" stroke="#a45c68" stroke-width="5" stroke-linecap="round"><path d="M85 188l-24-7m25 27l-30 7M427 185l25-16m-16 40l32-1"/></g>
+</svg>
